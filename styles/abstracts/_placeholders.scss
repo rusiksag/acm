@@ -1,8 +1,22 @@
-// %message-shared {
-// 	border: 1px solid #ccc;
-// 	padding: 10px;
-// 	color: #333;
-// }
+%text__small {
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+}
+
+%text__regular {
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+
+%title {
+	font-size: 4rem;
+	line-height: 4.8rem;
+}
+
+%subtitle {
+	font-style: 3.2rem;
+	line-height: 4rem;
+}
 
 // .message {
 // 	@extend %message-shared;

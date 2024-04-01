@@ -9,22 +9,19 @@ html {
 }
 
 body {
-	font-family: Geist-SemiBold, sans-serif;
-	font-size: var(--text);
+	font-family: $ff-light, sans-serif;
 	background-color: #00000005;
 }
 
 a {
 	text-decoration: none;
 	color: #242425;
+	display: inline-block;
 }
 
 .container {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-}
-
-h1 {
-	color: red;
+	padding: 0 3.2rem;
 }

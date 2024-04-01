@@ -1,9 +1,7 @@
-// @mixin theme($theme: DarkGray) {
-// 	background: $theme;
-// 	box-shadow: 0 0 1px rgba($theme, 0.25);
-// 	color: #fff;
-// }
-
-// .info {
-// 	@include theme;
-// }
+@mixin flex($direction, $align, $content, $gap) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $content;
+	gap: $gap;
+}
