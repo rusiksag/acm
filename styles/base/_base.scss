@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: Geist-SemiBold, sans-serif;
+	font-size: var(--text);
+	background-color: #00000005;
+}
+
+a {
+	text-decoration: none;
+	color: #242425;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: red;
+}
