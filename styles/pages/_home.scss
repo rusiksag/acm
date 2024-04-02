@@ -10,53 +10,41 @@ main {
 
 .home__welcome {
 	.promotion {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 1.2rem;
+		@include flex(row, center, center, 1.2rem);
 		padding: 0.6rem 0;
 
 		.promotion__new {
 			display: inline-block;
-			font-size: 1.2rem;
+			font-family: $ff-medium;
+			@extend %text__small;
 			color: #067a6e;
 
 			background-color: #d4f7f0;
 			padding: 0.45rem 1rem;
 			border-radius: 90px;
-			font-weight: bolder;
 		}
 
 		.promotion__text {
-			font-size: 1.4rem;
-			line-height: 2.4rem;
-			color: #09090b;
-			font-weight: bolder;
+			font-family: $ff-medium;
+			@extend %text__normal;
+			color: $color-secondary;
 		}
 
 		.promotion__btn {
-			font-size: 1.4rem;
-			line-height: 2rem;
-			color: #171717;
-			font-weight: bolder;
-
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-
+			font-family: $ff-medium;
+			@extend %text__normal;
+			color: $color-primary;
+			@include flex(row, center, flex-start, 1rem);
 			padding: 0.6rem 1.2rem;
 			border: 2px solid #eee;
 			border-radius: 100px;
-
 			background-color: #fff;
-
 			transition: all 120ms linear;
 
 			&:hover {
 				cursor: pointer;
-				transform: scale(1.02);
 				transform: translateY(-2px);
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 			}
 
 			svg {
@@ -66,62 +54,78 @@ main {
 	}
 
 	.hero {
-		padding: 13.5rem;
-		border: 1px solid #eee;
+		border: 1px solid #f4f4f4;
+		border-bottom: none;
 		background-color: #fff;
 
-		.hero__title {
-			font-size: 4rem;
-			line-height: 4.8rem;
-			color: #666;
-			margin-bottom: 3.2rem;
-			text-align: center;
-			font-weight: 500;
+		display: grid;
+		grid-template-columns: repeat(12, 90px);
+		grid-template-rows: repeat(5, 90px);
 
-			span {
-				color: #171717;
-				font-weight: 600;
-			}
+		.empty-box {
+			border-right: 1px solid #f4f4f4;
+			border-bottom: 1px solid #f4f4f4;
 		}
 
-		.hero__btns {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 2.4rem;
+		.hero__content {
+			grid-column: span 10;
+			grid-row: span 3;
+			border-bottom: 1px solid #f4f4f4;
+			border-right: 1px solid #f4f4f4;
+			@include flex(column, center, center, 0);
 
-			a {
-				font-size: 1.6rem;
-				line-height: 2.4rem;
-				border-radius: 6px;
-				display: inline-block;
+			.hero__title {
+				font-family: $ff-normal;
+				@extend %title;
+				letter-spacing: -1.5px;
+				color: $color-light;
+				margin-bottom: 3.2rem;
+				text-align: center;
 
-				transition: all 120ms linear;
-
-				&:hover {
-					cursor: pointer;
-					transform: scale(1.02);
-					transform: translateY(-2px);
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+				span {
+					font-family: $ff-normal;
+					color: $color-primary;
 				}
 			}
 
-			.hero__btn--dark {
-				border: 1px solid #171717;
-				background-color: #171717;
-				color: #fff;
-
+			.hero__btns {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				gap: 0.6rem;
+				gap: 2.4rem;
 
-				padding: 0.8rem 3.3rem 0.8rem 2.7rem;
-			}
+				a {
+					font-size: 1.6rem;
+					line-height: 2.4rem;
+					border-radius: 6px;
+					display: inline-block;
 
-			.hero__btn--light {
-				border: 1px solid #eee;
-				padding: 0.8rem 4.2rem;
+					transition: all 150ms linear;
+
+					&:hover {
+						cursor: pointer;
+						transform: translateY(-2px);
+						box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+					}
+				}
+
+				.hero__btn--dark {
+					border: 1px solid #171717;
+					background-color: #171717;
+					color: #fff;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 0.6rem;
+
+					padding: 0.8rem 3.3rem 0.8rem 2.7rem;
+				}
+
+				.hero__btn--light {
+					border: 1px solid #eee;
+					padding: 0.8rem 4.2rem;
+				}
 			}
 		}
 	}
@@ -140,7 +144,7 @@ main {
 		justify-content: center;
 		gap: 1.5rem;
 
-		h2 {
+		h3 {
 			font-size: 2.4rem;
 			line-height: 3.2rem;
 			color: #171717;
@@ -165,9 +169,8 @@ main {
 
 			&:hover {
 				cursor: pointer;
-				transform: scale(1.02);
 				transform: translateY(-2px);
-				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 			}
 		}
 	}
@@ -181,10 +184,10 @@ main {
 	padding: 7rem 3.25rem 4.8rem;
 
 	.pricing__title {
-		font-size: 3.2rem;
-		line-height: 5.3rem;
-		color: #171717;
-		margin-bottom: 0.9rem;
+		font-family: $ff-medium;
+		@extend %subtitle;
+		color: $color-primary;
+		margin-bottom: 1.5rem;
 	}
 
 	.pricing__content {
@@ -198,30 +201,32 @@ main {
 			width: 60%;
 
 			.pricing-promotion {
-				display: flex;
-				align-items: center;
-				gap: 2.4rem;
+				@include flex(row, center, flex-start, 2.4rem);
 				margin-bottom: 4.8rem;
 
 				a {
-					font-size: 1.4rem;
-					line-height: 2.4rem;
+					@extend %text__normal;
 					display: inline-block;
-					font-weight: bolder;
+					transition: all 150ms linear;
 				}
 
 				a:first-child {
+					font-family: $ff-normal;
 					color: #fff;
-					padding: 0.8rem 1.6rem;
-					background-color: #171717;
+					padding: 1rem 1.6rem;
+					background-color: $color-primary;
 					border-radius: 6px;
+
+					&:hover {
+						transform: translateY(-2px);
+						box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+					}
 				}
 
 				a:last-child {
 					color: #6b7280;
-					display: flex;
-					align-items: center;
-					gap: 0.6rem;
+					@include flex(row, center, flex-start, 0.6rem);
+					font-family: $ff-medium;
 
 					img {
 						border: 1px solid #6b7280;
@@ -229,31 +234,42 @@ main {
 						padding: 0.2rem;
 						width: 18px;
 						height: 18px;
+						transition: all 150ms linear;
+					}
+
+					&:hover {
+						img {
+							transform: translateX(3px);
+						}
 					}
 				}
 			}
 
 			.pricing__variants {
-				display: flex;
-				flex-direction: column;
-				gap: 1rem;
+				@include flex(column, stretch, flex-start, 1rem);
 
 				.pricing__variant {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					padding: 1.75rem 2.5rem 1.75rem 4rem;
+					@include flex(row, center, space-between, 0);
+					padding: 1.75rem 0 1.75rem 4rem;
 					background-color: #fff;
-
-					border: 2px solid #eee;
+					border: 1px solid #eaeaea;
 					border-radius: 12px;
+					box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+					transition: all 120ms linear;
 
-					box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+					input {
+						display: none;
+					}
+
+					&:hover {
+						cursor: pointer;
+						border-color: #0070f3;
+						background-color: rgba(0, 112, 243, 0.03);
+					}
 
 					div {
-						font-size: 1.4rem;
-						line-height: 2rem;
-						color: #171717;
+						@extend %text__normal;
+						color: $color-primary;
 					}
 
 					span {
@@ -261,15 +277,14 @@ main {
 					}
 
 					.price {
+						font-family: $ff-medium;
 						font-size: 3.2rem;
-						color: #171717;
-						font-weight: 600;
+						line-height: 3.2rem;
+						color: $color-primary;
 					}
 
 					.pricing__info {
-						display: flex;
-						align-items: center;
-						gap: 0.8rem;
+						@include flex(row, center, flex-start, 0.8rem);
 
 						> div {
 							padding: 0 0.8rem;
@@ -278,6 +293,34 @@ main {
 							&:last-child {
 								border: none;
 							}
+						}
+					}
+
+					.pricing__check {
+						width: 17px;
+						height: 17px;
+						border: 2px solid #374151;
+						border-radius: 50%;
+						position: relative;
+						overflow: hidden;
+						margin-right: 2.5rem;
+					}
+
+					input:checked + .pricing__check {
+						margin-right: 2.2rem;
+						width: 20px;
+						height: 20px;
+						border: none;
+						transition: all 120ms linear;
+
+						&::after {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							content: url('../../public/images/check.svg');
 						}
 					}
 				}
@@ -290,10 +333,11 @@ main {
 			border-radius: 12px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.08),
 				0 0 30px rgba(0, 0, 0, 0.06), 0 0 40px rgba(0, 0, 0, 0.06);
-			padding: 2.6rem 3.6rem 2.3rem 2rem;
+			padding: 2.6rem 2rem 2.3rem;
 
 			display: flex;
 			flex-direction: column;
+			max-width: 348px;
 
 			.pricing__logo {
 				display: flex;
@@ -307,41 +351,39 @@ main {
 					background-color: #09090b;
 					border-radius: 8px;
 
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					@include flex(row, center, center, 0);
 				}
 
 				.logo_info {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
+					@include flex(column, flex-start, space-between, 0);
 
 					span:first-child {
 						font-size: 1.6rem;
-						color: #09090b;
-						font-weight: 600;
+						color: $color-secondary;
+						font-family: $ff-semibold;
 					}
 
 					span:last-child {
-						font-size: 1.2rem;
-						line-height: 1.6rem;
-						color: #26262640;
-						font-weight: 600;
+						font-family: $ff-medium;
+						@extend %text__small;
+						color: #26262670;
+
+						span {
+							@extend %text__small;
+							font-family: $ff-light;
+						}
 					}
 				}
 			}
 
 			.pricing__total_info {
-				display: flex;
-				flex-direction: column;
-				gap: 0.6rem;
+				@include flex(column, stretch, flex-start, 0.6rem);
 				margin-bottom: 2.4rem;
 
 				> div {
-					font-size: 1.2rem;
-					line-height: 2.1rem;
+					@extend %text__small;
 					color: #4b5563;
+					margin-bottom: 0.4rem;
 
 					display: flex;
 					align-items: center;
@@ -350,31 +392,26 @@ main {
 			}
 
 			.pricing__content_right_btn {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
+				display: block;
 				align-self: center;
+				@include flex(row, center, space-between, 0);
 
-				background-color: #171717;
+				background-color: $color-primary;
 				box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
 				min-width: 284px;
+				margin: 0 auto;
 
-				font-size: 1.4rem;
-				line-height: 2rem;
+				@extend %text__normal;
 				color: #fff;
-
 				padding: 1rem 1.6rem 1rem 1.3rem;
 				border-radius: 6px;
-
 				margin-top: auto;
-
 				transition: all 120ms linear;
 
 				&:hover {
 					cursor: pointer;
-					transform: scale(1.02);
 					transform: translateY(-2px);
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+					box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
 				}
 
 				svg {
@@ -386,10 +423,308 @@ main {
 	}
 
 	.pricing__info {
-		font-size: 1.4rem;
-		line-height: 2.1rem;
+		@extend %text__small;
 		color: #6b7280;
 		text-align: center;
+	}
+}
+
+// traders
+
+.traders {
+	padding: 4.35rem 19.75rem 2.7rem 13.75rem;
+	border: 1px solid #eee;
+	border-top: none;
+
+	.traders__top {
+		@include flex(row, flex-end, flex-start, 8rem);
+		margin-bottom: 4rem;
+
+		.traders__top-left {
+			> div {
+				@include flex(row, center, flex-start, 0.8rem);
+				padding: 0.45rem 0;
+				p {
+					@extend %text__normal;
+					color: $color-light;
+				}
+			}
+
+			h3 {
+				font-family: $ff-medium;
+				font-size: $fs-large;
+				line-height: $lh-large;
+				color: $color-primary;
+
+				span {
+					display: block;
+					color: $color-light;
+				}
+			}
+		}
+		.traders__top-right {
+			a {
+				font-size: $fs-medium;
+				line-height: $lh-medium;
+				color: #fff;
+				background-color: $color-primary;
+				padding: 1rem 2rem;
+				border-radius: 6px;
+				transition: all 120ms linear;
+
+				&:hover {
+					cursor: pointer;
+					transform: translateY(-2px);
+					box-shadow: 0 6px 5px rgba(0, 0, 0, 0.12);
+				}
+			}
+		}
+	}
+
+	.traders__body {
+		margin-bottom: 7.15rem;
+		padding: 0 10.7rem;
+
+		@include flex(row, center, flex-start, 0);
+
+		.traders__features {
+			@include flex(column, flex-start, space-between, 4rem);
+			margin-right: 9rem;
+
+			div {
+				@extend %text__normal;
+				@include flex(row, center, flex-start, 0.8rem);
+				color: $color-primary;
+				padding: 0.8rem 1.4rem;
+				border-radius: 1.2rem;
+				border: 2px solid #eee;
+				background-color: #fafafa;
+
+				span:first-child {
+					@include flex(row, center, center, 0);
+					width: 16px;
+					height: 16px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+
+		.traders__hub {
+			@include flex(row, center, flex-start, 0);
+
+			.traders__logo {
+				background-color: #fafafa;
+				border: 2px solid #eee;
+				border-radius: 12px;
+				padding: 2rem 1rem;
+				margin-right: 3.4rem;
+				@include flex(row, center, center, 0);
+
+				span {
+					display: block;
+					width: 40px;
+					height: 40px;
+					background-color: $color-primary;
+					@include flex(column, center, center, 0);
+					border-radius: 50%;
+				}
+			}
+
+			.traders__hub-right {
+				border: 2px solid #eee;
+				border-radius: 12px;
+				overflow: hidden;
+				background-color: #fafafa;
+				@include flex(row, center, flex-start, 7.5rem);
+				margin-right: 8.5rem;
+
+				.traders__logo {
+					align-self: center;
+					transform: translateX(-7px);
+				}
+
+				.locks {
+					span {
+						width: 40px;
+						height: 62px;
+						@include flex(column, center, center, 0);
+						border: 2px solid #eee;
+						border-right-width: 1px;
+
+						&:first-child {
+							border-top: none;
+							border-bottom: none;
+						}
+
+						&:last-child {
+							border-bottom: none;
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
+
+		.traders__devices {
+			@include flex(column, center, flex-start, 3.2rem);
+
+			span {
+				@include flex(row, center, center, 0);
+				width: 40px;
+				height: 40px;
+				border: 2px solid #eee;
+				border-radius: 50%;
+				background-color: #fff;
+
+				img {
+					width: 16px;
+				}
+			}
+		}
+	}
+
+	.traders__bottom {
+		p {
+			@extend %text__normal;
+			color: $color-light;
+			text-align: center;
+		}
+	}
+}
+
+// advantages
+
+.advantages {
+	border: 1px solid #eee;
+	border-top: none;
+	@include flex(row, stretch, flex-start, 0);
+
+	.advantages__suptitle {
+		font-size: $fs-medium;
+		line-height: $lh-regular;
+		color: $color-light;
+
+		@include flex(row, center, flex-start, 0.8rem);
+		margin-bottom: 2.4rem;
+	}
+
+	.advantages__left {
+		padding: 3.15rem 4.8rem;
+		border-right: 1px solid #eee;
+		width: 50%;
+
+		h3 {
+			font-family: $ff-medium;
+			font-size: $fs-large;
+			line-height: $lh-large;
+			color: $color-primary;
+			margin-bottom: 5.85rem;
+
+			span {
+				font-family: $ff-light;
+				color: $color-light;
+			}
+		}
+
+		.advantages__chart {
+			padding: 0 10.35rem 0 4.5rem;
+			@include flex(column, center, space-between, 6rem);
+
+			> div {
+				font-family: $ff-medium;
+				font-size: 2rem;
+				line-height: $lh-large;
+				background-color: #fff;
+				padding: 1.2rem 2.9rem;
+				border: 2px solid #eee;
+				border-radius: 12px;
+
+				&:first-child {
+					align-self: flex-start;
+				}
+				&:last-child {
+					align-self: flex-end;
+				}
+			}
+
+			span {
+				width: 30px;
+				height: 30px;
+				border: 1px solid #eee;
+				border-radius: 50%;
+				background-color: #fff;
+
+				@include flex(row, center, center, 0);
+			}
+		}
+	}
+
+	.advantages__right {
+		padding: 3.15rem 4.8rem;
+		width: 50%;
+
+		h3 {
+			font-family: $ff-medium;
+			font-size: $fs-large;
+			line-height: $lh-large;
+			color: $color-primary;
+			margin-bottom: 5.85rem;
+
+			span {
+				font-family: $ff-light;
+				color: $color-light;
+			}
+		}
+
+		.advantages__performance-card {
+			background-color: #000;
+			color: #c7c3d2;
+			padding: 2.4rem 0 6rem;
+			border-radius: 2rem;
+			@include flex(column, center, center, 0);
+
+			h4 {
+				font-size: 2rem;
+				line-height: 2.8rem;
+				margin-bottom: 5.3rem;
+				font-family: $ff-light;
+				font-weight: normal;
+				text-align: center;
+			}
+
+			.performance__speed {
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+				padding: 0 1rem;
+				border-radius: 12px;
+				border: 1px solid #ffffff10;
+				margin-bottom: 2rem;
+			}
+
+			.change__performance {
+				@include flex(row, center, flex-start, 3rem);
+
+				> div {
+					@include flex(column, flex-start, flex-start, 1rem);
+
+					span:first-child {
+						font-size: 1.8rem;
+						line-height: 2.8rem;
+					}
+
+					span:last-child {
+						@include flex(row, center, flex-start, 0.5rem);
+						font-size: 1.2rem;
+						line-height: 1.4rem;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -495,5 +830,19 @@ main {
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 			}
 		}
+	}
+}
+
+// hosting
+
+.hosting {
+	background-image: url('../../public/images/bg-hosting.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+
+	h2 {
+		@extend %subtitle;
 	}
 }

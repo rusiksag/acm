@@ -11,7 +11,7 @@
 
 	a {
 		color: #fff;
-		@extend %text__regular;
+		@extend %text__normal;
 		font-family: $ff-medium;
 
 		&:last-child {
