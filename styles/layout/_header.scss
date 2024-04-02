@@ -2,9 +2,7 @@
 	background-color: #fff;
 	.header__inner {
 		padding: 0.95rem 0;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include flex(row, center, space-between, 0);
 	}
 
 	.header__left {
@@ -15,19 +13,15 @@
 			gap: 1.2rem;
 
 			.logo_info {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
+				@include flex(column, stretch, space-between, 0);
 				font-family: $ff-semibold;
 
 				span:first-child {
-					font-size: 1.6rem;
+					font-size: $fs-medium;
 					color: $color-secondary;
 				}
 
 				span:last-child {
-					// font-size: 1.2rem;
-					// line-height: 1.6rem;
 					@extend %text__small;
 					color: #26262640;
 
@@ -40,19 +34,13 @@
 		}
 
 		.header__nav {
-			display: flex;
-			align-items: center;
-			gap: 2.4rem;
+			@include flex(row, center, flex-start, 2.4rem);
 
 			a {
-				font-size: 1.4rem;
-				line-height: 2rem;
+				font-size: $fs-regular;
+				line-height: $lh-regular;
 				color: #09090b60;
-
-				display: flex;
-				align-items: center;
-				gap: 0.8rem;
-
+				@include flex(row, center, flex-start, 0.8rem);
 				transition: all 120ms linear;
 
 				svg {
@@ -60,20 +48,18 @@
 				}
 
 				&:hover {
-					color: #09090b;
+					color: $color-secondary;
 				}
 			}
 		}
 	}
 
 	.header__rigt {
-		display: flex;
-		align-items: center;
-		gap: 1.14rem;
+		@include flex(row, center, flex-start, 1.14rem);
 
 		a {
-			font-size: 1.4rem;
-			color: #09090b;
+			font-size: $fs-regular;
+			color: $color-secondary;
 			transition: all 150ms linear;
 			position: relative;
 
@@ -84,28 +70,20 @@
 		}
 
 		.start__btn {
-			display: flex;
-			align-items: center;
+			@include flex(row, center, flex-start, 1rem);
 			padding: 0.65rem 1.3rem;
-			gap: 1rem;
-
 			border: 1px solid #e4e4e7;
 			background-color: transparent;
 			border-radius: 5px;
-
-			font-size: 1.4rem;
-			color: #09090b;
+			font-size: $fs-regular;
+			color: $color-secondary;
 
 			span {
-				display: flex;
-				align-items: center;
-				gap: 0.6rem;
-
-				background-color: #09090b;
+				@include flex(row, center, flex-start, 0.6rem);
+				background-color: $color-secondary;
 				padding: 0.5rem 1.1rem;
 				border-radius: 6px;
-
-				font-size: 1.4rem;
+				font-size: $fs-regular;
 				color: #fff;
 			}
 		}
