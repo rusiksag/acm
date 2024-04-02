@@ -11,6 +11,7 @@ function Header() {
 			<Supheader />
 			<div className='container'>
 				<div className='header__inner'>
+					
 					<div className='header__left'>
 						<div className='header__logo'>
 							<Logo />
@@ -48,6 +49,7 @@ function Header() {
 							<Link href={'#'}>Support</Link>
 						</div>
 					</div>
+
 					<div className='header__rigt'>
 						<Link href={'#'}>Login</Link>
 						<Link href={'#'} className='start__btn'>
