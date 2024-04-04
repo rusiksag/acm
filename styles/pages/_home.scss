@@ -1,130 +1,126 @@
 /* Home page */
 
-main {
-	width: 100%;
-	max-width: 1079px;
-	margin: 0 auto;
-}
-
 // welcome section
 
-.home__welcome {
-	.promotion {
-		@include flex(row, center, center, 1.2rem);
-		padding: 0.6rem 0;
+.welcome {
+	.welcome__inner {
+		.promotion {
+			@include flex(row, center, center, 1.2rem);
+			padding: 0.6rem 0;
 
-		.promotion__new {
-			display: inline-block;
-			font-family: $ff-medium;
-			@extend %text__small;
-			color: #067a6e;
+			.promotion__new {
+				display: inline-block;
+				font-family: $ff-medium;
+				@extend %text__small;
+				color: #067a6e;
 
-			background-color: #d4f7f0;
-			padding: 0.45rem 1rem;
-			border-radius: 90px;
-		}
-
-		.promotion__text {
-			font-family: $ff-medium;
-			@extend %text__normal;
-			color: $color-secondary;
-		}
-
-		.promotion__btn {
-			font-family: $ff-medium;
-			@extend %text__normal;
-			color: $color-primary;
-			@include flex(row, center, flex-start, 1rem);
-			padding: 0.6rem 1.2rem;
-			border: 2px solid #eee;
-			border-radius: 100px;
-			background-color: #fff;
-			transition: all 120ms linear;
-
-			&:hover {
-				cursor: pointer;
-				transform: translateY(-2px);
-				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+				background-color: #d4f7f0;
+				padding: 0.45rem 1rem;
+				border-radius: 90px;
 			}
 
-			svg {
-				transform: rotate(90deg);
+			.promotion__text {
+				font-family: $ff-medium;
+				@extend %text__normal;
+				color: $color-secondary;
 			}
-		}
-	}
 
-	.hero {
-		border: 1px solid #f4f4f4;
-		border-bottom: none;
-		background-color: #fff;
+			.promotion__btn {
+				font-family: $ff-medium;
+				@extend %text__normal;
+				color: $color-primary;
+				@include flex(row, center, flex-start, 1rem);
+				padding: 0.6rem 1.2rem;
+				border: 2px solid #eee;
+				border-radius: 100px;
+				background-color: #fff;
+				transition: all 120ms linear;
 
-		display: grid;
-		grid-template-columns: repeat(12, 90px);
-		grid-template-rows: repeat(5, 90px);
+				&:hover {
+					cursor: pointer;
+					transform: translateY(-2px);
+					box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+				}
 
-		.empty-box {
-			border-right: 1px solid #f4f4f4;
-			border-bottom: 1px solid #f4f4f4;
-		}
-
-		.hero__content {
-			grid-column: span 10;
-			grid-row: span 3;
-			border-bottom: 1px solid #f4f4f4;
-			border-right: 1px solid #f4f4f4;
-			@include flex(column, center, center, 0);
-
-			.hero__title {
-				font-family: $ff-normal;
-				@extend %title;
-				letter-spacing: -1.5px;
-				color: $color-light;
-				margin-bottom: 3.2rem;
-				text-align: center;
-
-				span {
-					font-family: $ff-normal;
-					color: $color-primary;
+				svg {
+					transform: rotate(90deg);
 				}
 			}
+		}
 
-			.hero__btns {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 2.4rem;
+		.hero {
+			border: 1px solid #f4f4f4;
+			border-bottom: none;
+			background-color: #fff;
 
-				a {
-					font-size: 1.6rem;
-					line-height: 2.4rem;
-					border-radius: 6px;
-					display: inline-block;
+			display: grid;
+			grid-template-columns: repeat(12, minmax(89px, 1fr));
+			grid-template-rows: repeat(5, 90px);
 
-					transition: all 150ms linear;
+			.empty-box {
+				border-right: 1px solid #f4f4f4;
+				border-bottom: 1px solid #f4f4f4;
+			}
 
-					&:hover {
-						cursor: pointer;
-						transform: translateY(-2px);
-						box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+			.hero__content {
+				grid-column: span 10;
+				grid-row: span 3;
+				border-bottom: 1px solid #f4f4f4;
+				border-right: 1px solid #f4f4f4;
+				@include flex(column, center, center, 0);
+
+				.hero__title {
+					font-family: $ff-normal;
+					@extend %title;
+					letter-spacing: -1.5px;
+					color: $color-light;
+					margin-bottom: 3.2rem;
+					text-align: center;
+
+					span {
+						font-family: $ff-normal;
+						color: $color-primary;
 					}
 				}
 
-				.hero__btn--dark {
-					border: 1px solid #171717;
-					background-color: #171717;
-					color: #fff;
-
+				.hero__btns {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					gap: 0.6rem;
+					gap: 2.4rem;
 
-					padding: 0.8rem 3.3rem 0.8rem 2.7rem;
-				}
+					a {
+						font-size: 1.6rem;
+						line-height: 2.4rem;
+						border-radius: 6px;
+						display: inline-block;
 
-				.hero__btn--light {
-					border: 1px solid #eee;
-					padding: 0.8rem 4.2rem;
+						transition: all 150ms linear;
+
+						&:hover {
+							cursor: pointer;
+							transform: translateY(-2px);
+							box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+						}
+					}
+
+					.hero__btn--dark {
+						border: 1px solid #171717;
+						background-color: #171717;
+						color: #fff;
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						gap: 0.6rem;
+
+						padding: 0.8rem 3.3rem 0.8rem 2.7rem;
+					}
+
+					.hero__btn--light {
+						border: 1px solid #eee;
+						padding: 0.8rem 4.2rem;
+					}
 				}
 			}
 		}
@@ -134,11 +130,10 @@ main {
 // services section
 
 .services {
-	padding: 4.8rem 9.1rem;
-	border: 1px solid #eee;
-	border-top: none;
-
 	.services__inner {
+		padding: 4.8rem 9.1rem;
+		border: 1px solid #eee;
+		border-top: none;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -179,420 +174,423 @@ main {
 // pricing section
 
 .pricing {
-	border: 1px solid #eee;
-	border-top: none;
-	padding: 7rem 3.25rem 4.8rem;
+	.pricing__inner {
+		border: 1px solid #eee;
+		border-top: none;
+		padding: 7rem 3.25rem 4.8rem;
 
-	.pricing__title {
-		font-family: $ff-medium;
-		@extend %subtitle;
-		color: $color-primary;
-		margin-bottom: 1.5rem;
-	}
+		.pricing__title {
+			font-family: $ff-medium;
+			@extend %subtitle;
+			color: $color-primary;
+			margin-bottom: 1.5rem;
+		}
 
-	.pricing__content {
-		display: flex;
-		gap: 3.2rem;
-		margin-bottom: 3rem;
-
-		.pricing__content_left {
+		.pricing__content {
 			display: flex;
-			flex-direction: column;
-			width: 60%;
+			gap: 3.2rem;
+			margin-bottom: 3rem;
 
-			.pricing-promotion {
-				@include flex(row, center, flex-start, 2.4rem);
-				margin-bottom: 4.8rem;
+			.pricing__content_left {
+				display: flex;
+				flex-direction: column;
+				width: 60%;
 
-				a {
-					@extend %text__normal;
-					display: inline-block;
-					transition: all 150ms linear;
-				}
+				.pricing-promotion {
+					@include flex(row, center, flex-start, 2.4rem);
+					margin-bottom: 4.8rem;
 
-				a:first-child {
-					font-family: $ff-normal;
-					color: #fff;
-					padding: 1rem 1.6rem;
-					background-color: $color-primary;
-					border-radius: 6px;
-
-					&:hover {
-						transform: translateY(-2px);
-						box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-					}
-				}
-
-				a:last-child {
-					color: #6b7280;
-					@include flex(row, center, flex-start, 0.6rem);
-					font-family: $ff-medium;
-
-					img {
-						border: 1px solid #6b7280;
-						border-radius: 50%;
-						padding: 0.2rem;
-						width: 18px;
-						height: 18px;
+					a {
+						@extend %text__normal;
+						display: inline-block;
 						transition: all 150ms linear;
 					}
 
-					&:hover {
-						img {
-							transform: translateX(3px);
+					a:first-child {
+						font-family: $ff-normal;
+						color: #fff;
+						padding: 1rem 1.6rem;
+						background-color: $color-primary;
+						border-radius: 6px;
+
+						&:hover {
+							transform: translateY(-2px);
+							box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 						}
 					}
-				}
-			}
 
-			.pricing__variants {
-				@include flex(column, stretch, flex-start, 1rem);
-
-				.pricing__variant {
-					@include flex(row, center, space-between, 0);
-					padding: 1.75rem 0 1.75rem 4rem;
-					background-color: #fff;
-					border: 1px solid #eaeaea;
-					border-radius: 12px;
-					box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-					transition: all 120ms linear;
-
-					input {
-						display: none;
-					}
-
-					&:hover {
-						cursor: pointer;
-						border-color: #0070f3;
-						background-color: rgba(0, 112, 243, 0.03);
-					}
-
-					div {
-						@extend %text__normal;
-						color: $color-primary;
-					}
-
-					span {
-						color: #666;
-					}
-
-					.price {
+					a:last-child {
+						color: #6b7280;
+						@include flex(row, center, flex-start, 0.6rem);
 						font-family: $ff-medium;
-						font-size: 3.2rem;
-						line-height: 3.2rem;
-						color: $color-primary;
-					}
 
-					.pricing__info {
-						@include flex(row, center, flex-start, 0.8rem);
+						img {
+							border: 1px solid #6b7280;
+							border-radius: 50%;
+							padding: 0.2rem;
+							width: 18px;
+							height: 18px;
+							transition: all 150ms linear;
+						}
 
-						> div {
-							padding: 0 0.8rem;
-							border-right: 1px solid #eee;
-
-							&:last-child {
-								border: none;
+						&:hover {
+							img {
+								transform: translateX(3px);
 							}
 						}
 					}
+				}
 
-					.pricing__check {
-						width: 17px;
-						height: 17px;
-						border: 2px solid #374151;
-						border-radius: 50%;
-						position: relative;
-						overflow: hidden;
-						margin-right: 2.5rem;
-					}
+				.pricing__variants {
+					@include flex(column, stretch, flex-start, 1rem);
 
-					input:checked + .pricing__check {
-						margin-right: 2.2rem;
-						width: 20px;
-						height: 20px;
-						border: none;
+					.pricing__variant {
+						@include flex(row, center, space-between, 0);
+						padding: 1.75rem 0 1.75rem 4rem;
+						background-color: #fff;
+						border: 1px solid #eaeaea;
+						border-radius: 12px;
+						box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 						transition: all 120ms linear;
 
-						&::after {
-							position: absolute;
-							top: 0;
-							left: 0;
-							width: 100%;
-							height: 100%;
-							object-fit: cover;
-							content: url('../../public/images/check.svg');
+						input {
+							display: none;
 						}
-					}
-				}
-			}
-		}
 
-		.pricing__content_right {
-			width: 40%;
-			background-color: #fff;
-			border-radius: 12px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.08),
-				0 0 30px rgba(0, 0, 0, 0.06), 0 0 40px rgba(0, 0, 0, 0.06);
-			padding: 2.6rem 2rem 2.3rem;
+						&:hover {
+							cursor: pointer;
+							border-color: #0070f3;
+							background-color: rgba(0, 112, 243, 0.03);
+						}
 
-			display: flex;
-			flex-direction: column;
-			max-width: 348px;
-
-			.pricing__logo {
-				display: flex;
-				gap: 1.2rem;
-				margin-bottom: 3.45rem;
-				margin-left: 1.2rem;
-
-				.logo_img_wrapper {
-					width: 32px;
-					height: 32px;
-					background-color: #09090b;
-					border-radius: 8px;
-
-					@include flex(row, center, center, 0);
-				}
-
-				.logo_info {
-					@include flex(column, flex-start, space-between, 0);
-
-					span:first-child {
-						font-size: 1.6rem;
-						color: $color-secondary;
-						font-family: $ff-semibold;
-					}
-
-					span:last-child {
-						font-family: $ff-medium;
-						@extend %text__small;
-						color: #26262670;
+						div {
+							@extend %text__normal;
+							color: $color-primary;
+						}
 
 						span {
-							@extend %text__small;
-							font-family: $ff-light;
+							color: #666;
+						}
+
+						.price {
+							font-family: $ff-medium;
+							font-size: 3.2rem;
+							line-height: 3.2rem;
+							color: $color-primary;
+						}
+
+						.pricing__info {
+							@include flex(row, center, flex-start, 0.8rem);
+
+							> div {
+								padding: 0 0.8rem;
+								border-right: 1px solid #eee;
+
+								&:last-child {
+									border: none;
+								}
+							}
+						}
+
+						.pricing__check {
+							width: 17px;
+							height: 17px;
+							border: 2px solid #374151;
+							border-radius: 50%;
+							position: relative;
+							overflow: hidden;
+							margin-right: 2.5rem;
+						}
+
+						input:checked + .pricing__check {
+							margin-right: 2.2rem;
+							width: 20px;
+							height: 20px;
+							border: none;
+							transition: all 120ms linear;
+
+							&::after {
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								content: url('../../public/images/check.svg');
+							}
 						}
 					}
 				}
 			}
 
-			.pricing__total_info {
-				@include flex(column, stretch, flex-start, 0.6rem);
-				margin-bottom: 2.4rem;
+			.pricing__content_right {
+				width: 40%;
+				background-color: #fff;
+				border-radius: 12px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.08),
+					0 0 30px rgba(0, 0, 0, 0.06), 0 0 40px rgba(0, 0, 0, 0.06);
+				padding: 2.6rem 2rem 2.3rem;
 
-				> div {
-					@extend %text__small;
-					color: #4b5563;
-					margin-bottom: 0.4rem;
+				display: flex;
+				flex-direction: column;
+				max-width: 348px;
 
+				.pricing__logo {
 					display: flex;
-					align-items: center;
-					gap: 0.83rem;
+					gap: 1.2rem;
+					margin-bottom: 3.45rem;
+					margin-left: 1.2rem;
+
+					.logo_img_wrapper {
+						width: 32px;
+						height: 32px;
+						background-color: #09090b;
+						border-radius: 8px;
+
+						@include flex(row, center, center, 0);
+					}
+
+					.logo_info {
+						@include flex(column, flex-start, space-between, 0);
+
+						span:first-child {
+							font-size: 1.6rem;
+							color: $color-secondary;
+							font-family: $ff-semibold;
+						}
+
+						span:last-child {
+							font-family: $ff-medium;
+							@extend %text__small;
+							color: #26262670;
+
+							span {
+								@extend %text__small;
+								font-family: $ff-light;
+							}
+						}
+					}
 				}
-			}
 
-			.pricing__content_right_btn {
-				display: block;
-				align-self: center;
-				@include flex(row, center, space-between, 0);
+				.pricing__total_info {
+					@include flex(column, stretch, flex-start, 0.6rem);
+					margin-bottom: 2.4rem;
 
-				background-color: $color-primary;
-				box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
-				min-width: 284px;
-				margin: 0 auto;
+					> div {
+						@extend %text__small;
+						color: #4b5563;
+						margin-bottom: 0.4rem;
 
-				@extend %text__normal;
-				color: #fff;
-				padding: 1rem 1.6rem 1rem 1.3rem;
-				border-radius: 6px;
-				margin-top: auto;
-				transition: all 120ms linear;
-
-				&:hover {
-					cursor: pointer;
-					transform: translateY(-2px);
-					box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+						display: flex;
+						align-items: center;
+						gap: 0.83rem;
+					}
 				}
 
-				svg {
-					width: 14px;
-					height: 14px;
+				.pricing__content_right_btn {
+					display: block;
+					align-self: center;
+					@include flex(row, center, space-between, 0);
+
+					background-color: $color-primary;
+					box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+					min-width: 284px;
+					margin: 0 auto;
+
+					@extend %text__normal;
+					color: #fff;
+					padding: 1rem 1.6rem 1rem 1.3rem;
+					border-radius: 6px;
+					margin-top: auto;
+					transition: all 120ms linear;
+
+					&:hover {
+						cursor: pointer;
+						transform: translateY(-2px);
+						box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+					}
+
+					svg {
+						width: 14px;
+						height: 14px;
+					}
 				}
 			}
 		}
-	}
 
-	.pricing__info {
-		@extend %text__small;
-		color: #6b7280;
-		text-align: center;
+		.pricing__info {
+			@extend %text__small;
+			color: #6b7280;
+			text-align: center;
+		}
 	}
 }
 
 // traders
 
 .traders {
-	padding: 4.35rem 19.75rem 2.7rem 13.75rem;
-	border: 1px solid #eee;
-	border-top: none;
+	.traders__inner {
+		padding: 4.35rem 19.75rem 2.7rem 13.75rem;
+		border: 1px solid #eee;
+		border-top: none;
+		.traders__top {
+			@include flex(row, flex-end, flex-start, 8rem);
+			margin-bottom: 4rem;
 
-	.traders__top {
-		@include flex(row, flex-end, flex-start, 8rem);
-		margin-bottom: 4rem;
+			.traders__top-left {
+				> div {
+					@include flex(row, center, flex-start, 0.8rem);
+					padding: 0.45rem 0;
+					p {
+						@extend %text__normal;
+						color: $color-light;
+					}
+				}
 
-		.traders__top-left {
-			> div {
-				@include flex(row, center, flex-start, 0.8rem);
-				padding: 0.45rem 0;
-				p {
-					@extend %text__normal;
-					color: $color-light;
+				h3 {
+					font-family: $ff-medium;
+					font-size: $fs-large;
+					line-height: $lh-large;
+					color: $color-primary;
+
+					span {
+						display: block;
+						color: $color-light;
+					}
 				}
 			}
+			.traders__top-right {
+				a {
+					font-size: $fs-medium;
+					line-height: $lh-medium;
+					color: #fff;
+					background-color: $color-primary;
+					padding: 1rem 2rem;
+					border-radius: 6px;
+					transition: all 120ms linear;
 
-			h3 {
-				font-family: $ff-medium;
-				font-size: $fs-large;
-				line-height: $lh-large;
-				color: $color-primary;
-
-				span {
-					display: block;
-					color: $color-light;
-				}
-			}
-		}
-		.traders__top-right {
-			a {
-				font-size: $fs-medium;
-				line-height: $lh-medium;
-				color: #fff;
-				background-color: $color-primary;
-				padding: 1rem 2rem;
-				border-radius: 6px;
-				transition: all 120ms linear;
-
-				&:hover {
-					cursor: pointer;
-					transform: translateY(-2px);
-					box-shadow: 0 6px 5px rgba(0, 0, 0, 0.12);
-				}
-			}
-		}
-	}
-
-	.traders__body {
-		margin-bottom: 7.15rem;
-		padding: 0 10.7rem;
-
-		@include flex(row, center, flex-start, 0);
-
-		.traders__features {
-			@include flex(column, flex-start, space-between, 4rem);
-			margin-right: 9rem;
-
-			div {
-				@extend %text__normal;
-				@include flex(row, center, flex-start, 0.8rem);
-				color: $color-primary;
-				padding: 0.8rem 1.4rem;
-				border-radius: 1.2rem;
-				border: 2px solid #eee;
-				background-color: #fafafa;
-
-				span:first-child {
-					@include flex(row, center, center, 0);
-					width: 16px;
-					height: 16px;
-
-					img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
+					&:hover {
+						cursor: pointer;
+						transform: translateY(-2px);
+						box-shadow: 0 6px 5px rgba(0, 0, 0, 0.12);
 					}
 				}
 			}
 		}
 
-		.traders__hub {
+		.traders__body {
+			margin-bottom: 7.15rem;
+			padding: 0 10.7rem;
+
 			@include flex(row, center, flex-start, 0);
 
-			.traders__logo {
-				background-color: #fafafa;
-				border: 2px solid #eee;
-				border-radius: 12px;
-				padding: 2rem 1rem;
-				margin-right: 3.4rem;
-				@include flex(row, center, center, 0);
+			.traders__features {
+				@include flex(column, flex-start, space-between, 4rem);
+				margin-right: 9rem;
 
-				span {
-					display: block;
-					width: 40px;
-					height: 40px;
-					background-color: $color-primary;
-					@include flex(column, center, center, 0);
-					border-radius: 50%;
+				div {
+					@extend %text__normal;
+					@include flex(row, center, flex-start, 0.8rem);
+					color: $color-primary;
+					padding: 0.8rem 1.4rem;
+					border-radius: 1.2rem;
+					border: 2px solid #eee;
+					background-color: #fafafa;
+
+					span:first-child {
+						@include flex(row, center, center, 0);
+						width: 16px;
+						height: 16px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
 				}
 			}
 
-			.traders__hub-right {
-				border: 2px solid #eee;
-				border-radius: 12px;
-				overflow: hidden;
-				background-color: #fafafa;
-				@include flex(row, center, flex-start, 7.5rem);
-				margin-right: 8.5rem;
+			.traders__hub {
+				@include flex(row, center, flex-start, 0);
 
 				.traders__logo {
-					align-self: center;
-					transform: translateX(-7px);
+					background-color: #fafafa;
+					border: 2px solid #eee;
+					border-radius: 12px;
+					padding: 2rem 1rem;
+					margin-right: 3.4rem;
+					@include flex(row, center, center, 0);
+
+					span {
+						display: block;
+						width: 40px;
+						height: 40px;
+						background-color: $color-primary;
+						@include flex(column, center, center, 0);
+						border-radius: 50%;
+					}
 				}
 
-				.locks {
-					span {
-						width: 40px;
-						height: 62px;
-						@include flex(column, center, center, 0);
-						border: 2px solid #eee;
-						border-right-width: 1px;
+				.traders__hub-right {
+					border: 2px solid #eee;
+					border-radius: 12px;
+					overflow: hidden;
+					background-color: #fafafa;
+					@include flex(row, center, flex-start, 7.5rem);
+					margin-right: 8.5rem;
 
-						&:first-child {
-							border-top: none;
-							border-bottom: none;
-						}
+					.traders__logo {
+						align-self: center;
+						transform: translateX(-7px);
+					}
 
-						&:last-child {
-							border-bottom: none;
-							border-top: none;
+					.locks {
+						span {
+							width: 40px;
+							height: 62px;
+							@include flex(column, center, center, 0);
+							border: 2px solid #eee;
+							border-right-width: 1px;
+
+							&:first-child {
+								border-top: none;
+								border-bottom: none;
+							}
+
+							&:last-child {
+								border-bottom: none;
+								border-top: none;
+							}
 						}
+					}
+				}
+			}
+
+			.traders__devices {
+				@include flex(column, center, flex-start, 3.2rem);
+
+				span {
+					@include flex(row, center, center, 0);
+					width: 40px;
+					height: 40px;
+					border: 2px solid #eee;
+					border-radius: 50%;
+					background-color: #fff;
+
+					img {
+						width: 16px;
 					}
 				}
 			}
 		}
 
-		.traders__devices {
-			@include flex(column, center, flex-start, 3.2rem);
-
-			span {
-				@include flex(row, center, center, 0);
-				width: 40px;
-				height: 40px;
-				border: 2px solid #eee;
-				border-radius: 50%;
-				background-color: #fff;
-
-				img {
-					width: 16px;
-				}
+		.traders__bottom {
+			p {
+				@extend %text__normal;
+				color: $color-light;
+				text-align: center;
 			}
-		}
-	}
-
-	.traders__bottom {
-		p {
-			@extend %text__normal;
-			color: $color-light;
-			text-align: center;
 		}
 	}
 }
@@ -600,127 +598,129 @@ main {
 // advantages
 
 .advantages {
-	border: 1px solid #eee;
-	border-top: none;
-	@include flex(row, stretch, flex-start, 0);
+	.advantages__inner {
+		border: 1px solid #eee;
+		border-top: none;
+		@include flex(row, stretch, flex-start, 0);
 
-	.advantages__suptitle {
-		font-size: $fs-medium;
-		line-height: $lh-regular;
-		color: $color-light;
+		.advantages__suptitle {
+			font-size: $fs-medium;
+			line-height: $lh-regular;
+			color: $color-light;
 
-		@include flex(row, center, flex-start, 0.8rem);
-		margin-bottom: 2.4rem;
-	}
-
-	.advantages__left {
-		padding: 3.15rem 4.8rem;
-		border-right: 1px solid #eee;
-		width: 50%;
-
-		h3 {
-			font-family: $ff-medium;
-			font-size: $fs-large;
-			line-height: $lh-large;
-			color: $color-primary;
-			margin-bottom: 5.85rem;
-
-			span {
-				font-family: $ff-light;
-				color: $color-light;
-			}
+			@include flex(row, center, flex-start, 0.8rem);
+			margin-bottom: 2.4rem;
 		}
 
-		.advantages__chart {
-			padding: 0 10.35rem 0 4.5rem;
-			@include flex(column, center, space-between, 6rem);
+		.advantages__left {
+			padding: 3.15rem 4.8rem;
+			border-right: 1px solid #eee;
+			width: 50%;
 
-			> div {
+			h3 {
 				font-family: $ff-medium;
-				font-size: 2rem;
+				font-size: $fs-large;
 				line-height: $lh-large;
-				background-color: #fff;
-				padding: 1.2rem 2.9rem;
-				border: 2px solid #eee;
-				border-radius: 12px;
+				color: $color-primary;
+				margin-bottom: 5.85rem;
 
-				&:first-child {
-					align-self: flex-start;
-				}
-				&:last-child {
-					align-self: flex-end;
+				span {
+					font-family: $ff-light;
+					color: $color-light;
 				}
 			}
 
-			span {
-				width: 30px;
-				height: 30px;
-				border: 1px solid #eee;
-				border-radius: 50%;
-				background-color: #fff;
-
-				@include flex(row, center, center, 0);
-			}
-		}
-	}
-
-	.advantages__right {
-		padding: 3.15rem 4.8rem;
-		width: 50%;
-
-		h3 {
-			font-family: $ff-medium;
-			font-size: $fs-large;
-			line-height: $lh-large;
-			color: $color-primary;
-			margin-bottom: 5.85rem;
-
-			span {
-				font-family: $ff-light;
-				color: $color-light;
-			}
-		}
-
-		.advantages__performance-card {
-			background-color: #000;
-			color: #c7c3d2;
-			padding: 2.4rem 0 6rem;
-			border-radius: 2rem;
-			@include flex(column, center, center, 0);
-
-			h4 {
-				font-size: 2rem;
-				line-height: 2.8rem;
-				margin-bottom: 5.3rem;
-				font-family: $ff-light;
-				font-weight: normal;
-				text-align: center;
-			}
-
-			.performance__speed {
-				font-size: 1.8rem;
-				line-height: 2.8rem;
-				padding: 0 1rem;
-				border-radius: 12px;
-				border: 1px solid #ffffff10;
-				margin-bottom: 2rem;
-			}
-
-			.change__performance {
-				@include flex(row, center, flex-start, 3rem);
+			.advantages__chart {
+				padding: 0 10.35rem 0 4.5rem;
+				@include flex(column, center, space-between, 6rem);
 
 				> div {
-					@include flex(column, flex-start, flex-start, 1rem);
+					font-family: $ff-medium;
+					font-size: 2rem;
+					line-height: $lh-large;
+					background-color: #fff;
+					padding: 1.2rem 2.9rem;
+					border: 2px solid #eee;
+					border-radius: 12px;
 
-					span:first-child {
-						font-size: 1.8rem;
-						line-height: 2.8rem;
+					&:first-child {
+						align-self: flex-start;
 					}
+					&:last-child {
+						align-self: flex-end;
+					}
+				}
 
-					span:last-child {
-						@include flex(row, center, flex-start, 0.5rem);
-						font-size: 1.2rem;
-						line-height: 1.4rem;
+				span {
+					width: 30px;
+					height: 30px;
+					border: 1px solid #eee;
+					border-radius: 50%;
+					background-color: #fff;
+
+					@include flex(row, center, center, 0);
+				}
+			}
+		}
+
+		.advantages__right {
+			padding: 3.15rem 4.8rem;
+			width: 50%;
+
+			h3 {
+				font-family: $ff-medium;
+				font-size: $fs-large;
+				line-height: $lh-large;
+				color: $color-primary;
+				margin-bottom: 5.85rem;
+
+				span {
+					font-family: $ff-light;
+					color: $color-light;
+				}
+			}
+
+			.advantages__performance-card {
+				background-color: #000;
+				color: #c7c3d2;
+				padding: 2.4rem 0 6rem;
+				border-radius: 2rem;
+				@include flex(column, center, center, 0);
+
+				h4 {
+					font-size: 2rem;
+					line-height: 2.8rem;
+					margin-bottom: 5.3rem;
+					font-family: $ff-light;
+					font-weight: normal;
+					text-align: center;
+				}
+
+				.performance__speed {
+					font-size: 1.8rem;
+					line-height: 2.8rem;
+					padding: 0 1rem;
+					border-radius: 12px;
+					border: 1px solid #ffffff10;
+					margin-bottom: 2rem;
+				}
+
+				.change__performance {
+					@include flex(row, center, flex-start, 3rem);
+
+					> div {
+						@include flex(column, flex-start, flex-start, 1rem);
+
+						span:first-child {
+							font-size: 1.8rem;
+							line-height: 2.8rem;
+						}
+
+						span:last-child {
+							@include flex(row, center, flex-start, 0.5rem);
+							font-size: 1.2rem;
+							line-height: 1.4rem;
+						}
 					}
 				}
 			}
@@ -731,48 +731,98 @@ main {
 // deploy
 
 .deploy {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	.deploy__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid #eee;
+		border-top: none;
 
-	padding: 5.2rem 4.8rem;
+		padding: 5.2rem 4.8rem;
 
-	.deploy__left {
-		.deploy__info {
-			margin-bottom: 2.4rem;
-			p {
-				font-size: 2.4rem;
-				line-height: 3.2rem;
-				color: #666;
+		.deploy__left {
+			.deploy__info {
+				margin-bottom: 2.4rem;
+				p {
+					font-size: 2.4rem;
+					line-height: 3.2rem;
+					color: #666;
 
-				span {
-					font-weight: bolder;
+					span {
+						font-weight: bolder;
+					}
+
+					.black {
+						color: #171717;
+					}
+
+					.blue {
+						color: #0068d6;
+					}
+
+					.purple {
+						color: #7820bc;
+					}
+				}
+			}
+
+			.deploy__left_btns {
+				display: flex;
+				align-items: center;
+				gap: 1.6rem;
+
+				a {
+					font-size: 1.4rem;
+					line-height: 2rem;
+					border-radius: 6px;
+					padding: 1rem 1.6rem;
+
+					transition: all 120ms linear;
+
+					&:hover {
+						cursor: pointer;
+						transform: scale(1.02);
+						transform: translateY(-2px);
+						box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+					}
 				}
 
-				.black {
+				.deploy__btn--dark {
+					background-color: #171717;
+					color: #fff;
+				}
+
+				.deploy__btn--light {
+					background-color: #fff;
 					color: #171717;
-				}
-
-				.blue {
-					color: #0068d6;
-				}
-
-				.purple {
-					color: #7820bc;
+					border: 1px solid #eee;
 				}
 			}
 		}
 
-		.deploy__left_btns {
-			display: flex;
-			align-items: center;
-			gap: 1.6rem;
+		.deploy__right {
+			max-width: 262px;
+
+			p {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				color: #666;
+				margin-bottom: 2.4rem;
+
+				span {
+					color: #171717;
+				}
+			}
 
 			a {
+				display: inline-block;
 				font-size: 1.4rem;
 				line-height: 2rem;
-				border-radius: 6px;
+				color: #171717;
 				padding: 1rem 1.6rem;
+				border-radius: 6px;
+				border: 1px solid #eee;
+				background-color: #fff;
 
 				transition: all 120ms linear;
 
@@ -782,52 +832,6 @@ main {
 					transform: translateY(-2px);
 					box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 				}
-			}
-
-			.deploy__btn--dark {
-				background-color: #171717;
-				color: #fff;
-			}
-
-			.deploy__btn--light {
-				background-color: #fff;
-				color: #171717;
-				border: 1px solid #eee;
-			}
-		}
-	}
-
-	.deploy__right {
-		max-width: 262px;
-
-		p {
-			font-size: 1.6rem;
-			line-height: 2.4rem;
-			color: #666;
-			margin-bottom: 2.4rem;
-
-			span {
-				color: #171717;
-			}
-		}
-
-		a {
-			display: inline-block;
-			font-size: 1.4rem;
-			line-height: 2rem;
-			color: #171717;
-			padding: 1rem 1.6rem;
-			border-radius: 6px;
-			border: 1px solid #eee;
-			background-color: #fff;
-
-			transition: all 120ms linear;
-
-			&:hover {
-				cursor: pointer;
-				transform: scale(1.02);
-				transform: translateY(-2px);
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 			}
 		}
 	}
@@ -840,9 +844,346 @@ main {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 200px;
+	padding: 12.8rem 8rem 12.2rem;
 
-	h2 {
-		@extend %subtitle;
+	.hosting__inner {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+
+		h2 {
+			@extend %subtitle;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+
+		> P {
+			font-size: $fs-medium;
+			line-height: $lh-medium;
+			color: #9394a1;
+			text-align: center;
+		}
+
+		.hosting__features {
+			margin-top: 1rem;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, minmax(260px, 1fr));
+			gap: 1rem;
+
+			h4 {
+				font-family: $ff-normal;
+				font-size: 1.3rem;
+				line-height: 2.4rem;
+				color: #fff;
+				margin-bottom: 0.4rem;
+			}
+
+			p {
+				font-size: 1.3rem;
+				line-height: 2.4rem;
+				color: #9394a1;
+			}
+
+			.encrypt-network {
+				grid-row: span 2;
+
+				p {
+					margin-bottom: 11rem;
+				}
+
+				.user-details {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					.user-id {
+						font-size: 1rem;
+						line-height: 1.4rem;
+						color: #9394a1;
+						margin-bottom: 3rem;
+						background-color: #9394a110;
+						padding: 3px 3px 1px 3px;
+					}
+
+					img {
+						margin-bottom: 1rem;
+					}
+
+					.username {
+						font-size: 1.1rem;
+						line-height: 1.8rem;
+						color: #fff;
+					}
+
+					.user-email {
+						font-size: 1.1rem;
+						line-height: 1.8rem;
+						color: #ffffff50;
+						margin-bottom: 7rem;
+					}
+				}
+			}
+
+			.multiple-broker {
+				padding-top: 4rem;
+				@include flex(column, center, flex-start, 0);
+
+				.features__content {
+					margin-top: auto;
+				}
+			}
+
+			.datacenter {
+				@include flex(column, center, center, 0);
+
+				> div {
+					margin-top: auto;
+				}
+			}
+
+			.remote-reboot {
+				.features__content {
+					margin-bottom: 5.5rem;
+				}
+				.reboot-btn {
+					width: 304px;
+					border: 3px solid #171717;
+					background-color: #9394a110;
+					padding: 1rem 1.2rem;
+					border-radius: 8px;
+					align-self: center;
+					@include flex(row, center, flex-start, 1.5rem);
+
+					span {
+						font-size: 1.1rem;
+						line-height: 1.8rem;
+						color: #747686;
+
+						&:last-child {
+							margin-left: auto;
+						}
+					}
+				}
+			}
+
+			.userdata {
+				@include flex(column, center, flex-start, 0);
+				> div {
+					margin-top: auto;
+				}
+			}
+
+			> div {
+				background-color: #212126;
+				display: flex;
+				flex-direction: column;
+				padding: 2rem 2rem 2.5rem 2rem;
+				border-radius: 1.6rem;
+			}
+		}
+	}
+}
+
+// dashboard
+
+.dashboard {
+	width: 100%;
+	max-width: 1120px;
+	margin: 0 auto;
+
+	.dashboard__inner {
+		padding: 8rem 0 4rem;
+
+		h2 {
+			@extend %title;
+			text-align: center;
+			color: $color-primary;
+			margin-bottom: 4rem;
+
+			span {
+				display: block;
+				color: $color-light;
+			}
+		}
+
+		img {
+			width: 100%;
+			max-height: 831px;
+		}
+	}
+}
+
+// trading-cloud
+
+.trading-cloud {
+	background-color: #131316;
+	.trading-cloud__inner {
+		width: 100%;
+		max-width: 1130px;
+		margin: 0 auto;
+		padding: 12.8rem 8rem 10rem;
+
+		.trading-cloud__content {
+			@include flex(column, center, center, 0);
+
+			h2 {
+				@extend %subtitle;
+				color: #fff;
+				margin-bottom: 2rem;
+			}
+
+			p {
+				font-size: $fs-medium;
+				line-height: $lh-medium;
+				color: #9394a1;
+			}
+
+			button {
+				border-radius: 12px;
+				border: 1px solid #272328;
+				font-size: $fs-medium;
+				line-height: $lh-regular;
+				color: #fff;
+				background-color: #131316;
+				padding: 1rem 2rem;
+				margin-top: 2rem;
+				margin-bottom: 6rem;
+				@include flex(row, center, flex-start, 1rem);
+				transition: all 120ms linear;
+
+				svg {
+					transition: all 120ms linear;
+				}
+
+				&:hover {
+					cursor: pointer;
+					border-color: #4b5563;
+					svg {
+						transform: translateX(3px);
+					}
+				}
+			}
+		}
+
+		.img-wrapper {
+			width: 100%;
+			max-height: 369px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+// features
+
+.features {
+	.features__inner {
+		padding: 8rem 0;
+		width: 100%;
+		max-width: 1216px;
+		margin: 0 auto;
+
+		.features__top {
+			a {
+				font-size: 1.3rem;
+				line-height: $lh-medium;
+				color: #6c47ff;
+				margin-bottom: 1.6rem;
+			}
+
+			h2 {
+				@extend %subtitle;
+				font-family: $ff-medium;
+			}
+
+			p {
+				font-size: 1.5rem;
+				line-height: 2.4rem;
+				color: #5e5f6e;
+				max-width: 70%;
+				margin-bottom: 1.6rem;
+			}
+		}
+
+		.features__grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(400px, 1fr));
+			grid-template-rows: repeat(2, minmax(260px, 1fr));
+			gap: 0.8rem;
+
+			h4 {
+				font-family: $ff-normal;
+				font-size: 1.3rem;
+				line-height: 2.4rem;
+				margin-bottom: 0.8rem;
+				color: #131316;
+			}
+
+			p {
+				font-size: 1.3rem;
+				line-height: $lh-regular;
+				color: #5e5f6e;
+				max-width: 80%;
+			}
+
+			.broker-compatibility {
+				grid-row: span 2;
+
+				.broker-compatibility-grid {
+					padding: 3.6rem 4.8rem 4rem;
+					display: grid;
+					gap: 8px;
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: repeat(3, 1fr);
+
+					> div {
+						border: 1px solid #eee;
+						padding: 4px;
+						background-color: #fff;
+						border-radius: 8px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							border-radius: 8px;
+						}
+					}
+
+					.mid-square {
+						background-color: rgba(47, 48, 55, 0.04);
+					}
+				}
+
+				.broker-compatibility-btns {
+					@include flex(row, center, center, 1.2rem);
+
+					.trade-platform {
+						font-size: 1.1rem;
+						line-height: 2rem;
+						color: #b7b8c2;
+						padding: 0.4rem 1.3rem;
+					}
+
+					.active-trade-platform {
+						border: 1px solid #eee;
+						border-radius: 100px;
+						background-color: #fafafb;
+					}
+				}
+			}
+
+			> div {
+				background-color: #fff;
+				border-radius: 16px;
+				padding: 2.4rem 2.4rem 3.6rem;
+			}
+		}
 	}
 }
