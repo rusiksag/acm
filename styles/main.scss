@@ -10,7 +10,8 @@
 @import 'base/base', 'base/fonts.scss';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/supheader', 'layout/container';
+@import 'layout/header', 'layout/supheader', 'layout/container',
+	'layout/supfooter', 'layout/footer';
 
 // 5. Components
 @import 'components/logo', 'components/technologies-dropdown',

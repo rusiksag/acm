@@ -1,0 +1,12 @@
+.footer {
+	.footer__inner {
+		max-width: 1396px;
+		margin: 0 auto;
+		padding: 6rem 2.4rem 4.8rem;
+
+		> p {
+			@extend %text__normal;
+			color: $color-light;
+		}
+	}
+}
