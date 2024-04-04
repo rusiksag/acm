@@ -1,4 +1,7 @@
 'use client';
+
+import data from '../../public/data.json';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -40,8 +43,10 @@ import binanceSquare from '../../public/images/binance-square.svg';
 import ninjaSquare from '../../public/images/ninja-square.svg';
 
 import TechnologiesDropdown from '@/components/technologiesDropdown/TechnologiesDropdown';
+import Accordion from '@/components/accordion/Accordion';
 
 export default function Home() {
+	const pricingData = data.cloudPricing;
 	function changeActiveBroker(n) {
 		const brokersBtns = document.querySelectorAll('.trade-platform');
 
@@ -806,6 +811,164 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section className='faq'>
+				<div className='faq__title'>FAQ</div>
+				<div className='faq__content'>
+					{[
+						{
+							label: 'What is a Trading VPS, and how does it benefit traders?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'Why is low latency important in trading, and how does your VPS ensure it?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label: 'Can I access my trading VPS from any device or location?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'How secure is a trading VPS, and what measures are in place to protect data?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'What makes your trading VPS different from regular VPS services?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label: 'How do I choose the right VPS plan for my trading needs?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'What kind of support can I expect if I face issues with my trading VPS?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'Are there any restrictions on trading platforms or brokers that can be used with your VPS?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label: 'How easy is it to upgrade or downgrade my VPS plan?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'How quickly can I get my trading VPS set up and start trading?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label: 'Can I run multiple trading accounts from a single VPS?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'Do you offer backups for my VPS, and how can I access them?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label:
+								'How does the performance of your trading VPS compare to running a trading platform on my own computer?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+						{
+							label: 'What happens to my open trades if the VPS goes down?',
+							body: "Are you passionate about the future of technology? Do you dream of contributing to the growth of IT in Uzbekistan, while also forging valuable connections and developing as a professional? If you are ambitious, energetic, and want to make a substantial impact on people's lives through IT, then we have an exciting opportunity for you!",
+						},
+					].map((el) => (
+						<Accordion data={el} />
+					))}
+				</div>
+			</section>
+
+			<section className='cloud-pricing'>
+				<div className='cloud-pricing__inner'>
+					<div className='cloud-pricing__promotion'>
+						<span>🎉</span>
+						<span>For Futures, Forex, Equity, and Crypto Trading</span>
+						<span>
+							<Image src={arrow} />
+						</span>
+					</div>
+
+					<h2>
+						On-demand VPS, Dedicated, and GPU Cloud Pricing.<br></br>
+						<span>Access high-powered servers. </span>
+						<span>Instantly</span>.
+					</h2>
+
+					<table className='cloud-pricing__table'>
+						<thead className='cloud-pricing__table_head'>
+							<tr>
+								<th>Plan</th>
+								<th>vCPUs</th>
+								<th>RAM</th>
+								<th>Storage</th>
+								<th>Setup Time</th>
+								<th>Price</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody className='cloud-pricing__table_body'>
+							{pricingData.map((el) => (
+								<tr key={el.id}>
+									<td className={`tariff ${el.isAvailable && 'available'}`}>
+										<span className={`${el.tariff} bullet`}></span>
+										<span>{el.tariff}</span>
+										<span>{el.type}</span>
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.vcpus}
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.ram} GB DDR4
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.storage} TB NVMe
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.setupTime}
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.price} / mo
+									</td>
+									<td className={`${el.isAvailable && 'available'}`}>
+										{el.isAvailable ? (
+											<Link className='deploy-btn' href='#'>
+												Deploy
+												<svg
+													xmlns='http://www.w3.org/2000/svg'
+													viewBox='0 0 448 512'>
+													<path
+														fill='#fff'
+														d='M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z'
+													/>
+												</svg>
+											</Link>
+										) : (
+											<Link className='unavailable-btn' href='#'>
+												Unavailable
+											</Link>
+										)}
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+					<p className='cloud-pricing__bottom'>
+						<span className='black'>Ready to trade?</span>
+						<span> Start deploying with our </span>
+						<span className='pink'>VPS Lite</span> or
+						<span className='purple'> VPS Pro</span> and
+						<span className='blue'> VPS Max</span>
+					</p>
 				</div>
 			</section>
 		</main>

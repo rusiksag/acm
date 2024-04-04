@@ -13,7 +13,8 @@
 @import 'layout/header', 'layout/supheader', 'layout/container';
 
 // 5. Components
-@import 'components/logo', 'components/technologies-dropdown';
+@import 'components/logo', 'components/technologies-dropdown',
+	'components/accordion';
 
 // 6. Page-specific styles
 @import 'pages/home';

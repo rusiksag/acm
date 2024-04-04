@@ -1,0 +1,64 @@
+{
+	"cloudPricing": [
+		{
+			"id": 1,
+			"tariff": "Lite",
+			"type": "VPS",
+			"vcpus": "8",
+			"ram": "16",
+			"ramGen": "4",
+			"storage": "160",
+			"setupTime": "instant",
+			"price": "47",
+			"isAvailable": true
+		},
+		{
+			"id": 2,
+			"tariff": "Pro",
+			"type": "VPS",
+			"vcpus": "12",
+			"ram": "32",
+			"ramGen": "4",
+			"storage": "320",
+			"setupTime": "instant",
+			"price": "97",
+			"isAvailable": true
+		},
+		{
+			"id": 3,
+			"tariff": "Max",
+			"type": "VPS",
+			"vcpus": "24",
+			"ram": "64",
+			"ramGen": "4",
+			"storage": "500",
+			"setupTime": "instant",
+			"price": "147",
+			"isAvailable": true
+		},
+		{
+			"id": 4,
+			"tariff": "Ultra",
+			"type": "Dedicated",
+			"vcpus": "n/a",
+			"ram": "128",
+			"ramGen": "5",
+			"storage": "2",
+			"setupTime": "instant",
+			"price": "297",
+			"isAvailable": false
+		},
+		{
+			"id": 5,
+			"tariff": "GPU",
+			"type": "Dedicated",
+			"vcpus": "n/a",
+			"ram": "128",
+			"ramGen": "5",
+			"storage": "2",
+			"setupTime": "instant",
+			"price": "497",
+			"isAvailable": false
+		}
+	]
+}

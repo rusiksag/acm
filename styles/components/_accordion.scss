@@ -1,0 +1,38 @@
+.accordion {
+	.accordion__label {
+		@include flex(row, center, space-between, 0);
+		font-size: $fs-medium;
+		line-height: $lh-medium;
+		color: $color-primary;
+		padding: 2rem;
+		transition: all 100ms linear;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+
+		span {
+			font-size: 2rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: #eee;
+		}
+	}
+
+	.accordion__body {
+		height: 0;
+		overflow: hidden;
+		transition: all 150ms linear;
+		border-radius: 10px;
+
+		font-size: $fs-medium;
+		line-height: $lh-medium;
+		color: $color-primary;
+		background-color: #f4f4f490;
+	}
+
+	.open-accordion-body {
+		height: 150px;
+		padding: 3rem 3rem;
+	}
+}
