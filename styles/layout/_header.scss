@@ -8,7 +8,7 @@
 	}
 
 	.header__left {
-		@include flex(row, center, flex-start, 8.4rem);
+		@include flex(row, center, flex-start, 4.2rem);
 
 		.header__logo {
 			display: flex;
@@ -72,7 +72,7 @@
 		}
 
 		.start__btn {
-			@include flex(row, center, flex-start, 1rem);
+			@include flex(row, center, flex-start, 0.6rem);
 			padding: 0.65rem 1.3rem;
 			border: 1px solid #e4e4e7;
 			background-color: transparent;

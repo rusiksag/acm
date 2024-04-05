@@ -178,23 +178,23 @@ export default function Home() {
 						<h3>Our Servers:</h3>
 						<Link className='servers__btn' href={'#'}>
 							<Image src={yena} alt='yena' />
-							Our Services
+							Forex VPS
 						</Link>
 						<Link className='servers__btn' href={'#'}>
 							<Image src={btc} alt='yena' />
-							Our Services
+							Crypto VPS
 						</Link>
 						<Link className='servers__btn' href={'#'}>
 							<Image src={rec} alt='yena' />
-							Our Services
+							GPU VPS
 						</Link>
 						<Link className='servers__btn' href={'#'}>
 							<Image src={chart} alt='yena' />
-							Our Services
+							Futures VPS
 						</Link>
 						<Link className='servers__btn' href={'#'}>
 							<Image src={speed} alt='yena' />
-							Our Services
+							AMD Ryzen VPS
 						</Link>
 					</div>
 				</div>
