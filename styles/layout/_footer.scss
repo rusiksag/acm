@@ -4,6 +4,105 @@
 		margin: 0 auto;
 		padding: 6rem 2.4rem 4.8rem;
 
+		nav {
+			@include flex(row, flex-start, space-between, 1rem);
+			margin-bottom: 3.3rem;
+
+			h3 {
+				font-size: 1.4rem;
+				line-height: 2.4rem;
+				color: #374151;
+				margin-bottom: 1.2rem;
+			}
+
+			.footer__copyright {
+				@include flex(column, flex-start, flex-start, 1rem);
+
+				.copyright {
+					@include flex(row, center, flex-start, 1rem);
+					@extend %text__normal;
+					color: $color-light;
+					margin-bottom: 1.7rem;
+				}
+
+				div:nth-child(2) {
+					@include flex(row, center, flex-start, 0.6rem);
+					color: #0070f3;
+					margin-bottom: 9.6rem;
+
+					span:first-child {
+						display: inline-block;
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: #0070f3;
+					}
+				}
+
+				div:last-child {
+					@include flex(row, center, flex-start, 1.6rem);
+				}
+			}
+
+			.nav-link {
+				@include flex(row, flex-end, flex-start, 5rem);
+
+				> div {
+					@include flex(column, flex-start, flex-start, 0.7rem);
+
+					a {
+						font-size: 1.4rem;
+						line-height: 2.4rem;
+						color: $color-light;
+						@include flex(row, center, flex-start, 0.2rem);
+						transition: all 120ms linear;
+
+						&:hover {
+							color: $color-primary;
+						}
+					}
+
+					.footer__dropdown {
+						gap: 0.4rem;
+						img {
+							transform: rotate(180deg);
+							width: 1rem;
+						}
+					}
+				}
+				div:last-child {
+					align-self: flex-start;
+					margin-top: 4.5rem;
+				}
+			}
+
+			.theme {
+				@include flex(row, center, flex-start, 0);
+				.theme-icon {
+					padding: 0.8rem;
+					border-radius: 50%;
+					transition: all 120ms linear;
+					@include flex(row, center, center, 0);
+
+					&:hover {
+						cursor: pointer;
+						background-color: #f2f2f2;
+
+						.hover {
+							fill: $color-primary;
+						}
+					}
+				}
+
+				.active-theme {
+					background-color: #f2f2f2;
+					.hover {
+						fill: $color-primary;
+					}
+				}
+			}
+		}
+
 		> p {
 			@extend %text__normal;
 			color: $color-light;

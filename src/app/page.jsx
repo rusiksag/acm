@@ -41,6 +41,10 @@ import metaSquare from '../../public/images/meta-square.svg';
 import tradeSquare from '../../public/images/trade-square.svg';
 import binanceSquare from '../../public/images/binance-square.svg';
 import ninjaSquare from '../../public/images/ninja-square.svg';
+// import tradestationLine from '../../public/images/tradestationLine.svg';
+// import ibkrLine from '../../public/images/ibkrLine.svg';
+// import ninjaLine from '../../public/images/ninjaLine.svg';
+// import metaLine from '../../public/images/metaLine.svg';
 
 import TechnologiesDropdown from '@/components/technologiesDropdown/TechnologiesDropdown';
 import Accordion from '@/components/accordion/Accordion';
@@ -370,26 +374,26 @@ export default function Home() {
 
 						<div className='traders__body'>
 							<div className='traders__features'>
-								<div>
+								<div className='trade-station'>
 									<span>
 										<Image src={tradeStation} alt='tradeStation logo' />
 									</span>
 									<span>TradeStation</span>
 								</div>
 
-								<div>
+								<div className='ibkr'>
 									<span>
 										<Image src={ibkr} alt='ibkr logo' />
 									</span>
 									<span>IBKR</span>
 								</div>
-								<div>
+								<div className='ninja'>
 									<span>
 										<Image src={ninjaTrade} alt='ninja trade logo' />
 									</span>
 									<span>Ninja Trader NTB</span>
 								</div>
-								<div>
+								<div className='meta'>
 									<span>
 										<Image src={metatrader} alt='tradeStation logo' />
 									</span>
@@ -403,7 +407,12 @@ export default function Home() {
 										<Image src={logo} alt='quantum logo' />
 									</span>
 								</div>
-
+								<div className='hub1-line'>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
 								<div className='traders__hub-right'>
 									<div className='traders__logo'>
 										<span>
@@ -412,13 +421,13 @@ export default function Home() {
 									</div>
 
 									<div className='locks'>
-										<span>
+										<span className='lock1'>
 											<Image src={lock} alt='lock' />
 										</span>
-										<span>
+										<span className='lock2'>
 											<Image src={lock} alt='lock' />
 										</span>
-										<span>
+										<span className='lock3'>
 											<Image src={lock} alt='lock' />
 										</span>
 									</div>
@@ -426,13 +435,13 @@ export default function Home() {
 							</div>
 
 							<div className='traders__devices'>
-								<span>
+								<span className='desktop'>
 									<Image src={desktop} alt='desktop' />
 								</span>
-								<span>
+								<span className='tablet'>
 									<Image src={tablet} alt='tablet' />
 								</span>
-								<span>
+								<span className='phone'>
 									<Image src={phone} alt='phone' />
 								</span>
 							</div>
@@ -758,7 +767,7 @@ export default function Home() {
 										/>
 									</svg>
 								</div>
-								{/* there would be dropdown menu */}
+
 								<div></div>
 							</div>
 							<div className='easy-access__content'>
