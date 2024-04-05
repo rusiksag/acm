@@ -41,10 +41,6 @@ import metaSquare from '../../public/images/meta-square.svg';
 import tradeSquare from '../../public/images/trade-square.svg';
 import binanceSquare from '../../public/images/binance-square.svg';
 import ninjaSquare from '../../public/images/ninja-square.svg';
-// import tradestationLine from '../../public/images/tradestationLine.svg';
-// import ibkrLine from '../../public/images/ibkrLine.svg';
-// import ninjaLine from '../../public/images/ninjaLine.svg';
-// import metaLine from '../../public/images/metaLine.svg';
 
 import TechnologiesDropdown from '@/components/technologiesDropdown/TechnologiesDropdown';
 import Accordion from '@/components/accordion/Accordion';

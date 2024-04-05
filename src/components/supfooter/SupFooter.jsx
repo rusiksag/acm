@@ -6,15 +6,6 @@ import github from '../../../public/images/github.svg';
 import twitter from '../../../public/images/twitter.svg';
 import caret from '../../../public/images/caret.svg';
 
-const themeIcons = document.querySelectorAll('.theme-icon');
-themeIcons.forEach((icon) => {
-	icon.classList.remove('active-theme');
-	icon.addEventListener('click', () => {
-		console.log('first');
-		icon.classList.add('active-theme');
-	});
-});
-
 function SupFooter() {
 	return (
 		<div className='supfooter'>
