@@ -6,7 +6,7 @@ function Supheader() {
 	return (
 		<div className='supheader'>
 			<div className='supheader__inner'>
-				<Link href='#'>Restocked Today</Link>
+				<Link href='#'>AMD Ryzen in Chicago Datacenter Restocked</Link>
 				<Link href='#'>
 					<span>Read more</span>
 					<Image src={play} alt='play' width={8} />

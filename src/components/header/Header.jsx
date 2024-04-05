@@ -51,7 +51,7 @@ function Header() {
 				<div className='header__rigt'>
 					<Link href={'#'}>Login</Link>
 					<Link href={'#'} className='start__btn'>
-						Start Now
+						Start Trading
 						<span>
 							<Image src={logo} alt='acme logo' />
 							Deploy Server
